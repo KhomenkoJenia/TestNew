@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(211, 211, 211);
+}
+
+.container {
+  text-align: center;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.btn-donate {
+  margin: 30px 15px;
+  display: inline-block;
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(229, 224, 224);
+  --btn-bg-2: rgb(174, 176, 179);
+  --btn-bg-color: rgb(195, 189, 189);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: rgb(61, 61, 61);
+  box-shadow: 0px 0px 20px rgba(176, 177, 178, 0.5),
+    0px 5px 5px -1px rgba(197, 198, 199, 0.25),
+    inset 4px 4px 8px rgba(156, 157, 158, 0.5),
+    inset -4px -4px 8px rgba(205, 206, 207, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
